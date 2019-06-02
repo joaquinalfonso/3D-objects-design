@@ -1,5 +1,5 @@
 bigCylinderRaduis = 30;
-bigCylinderHeight = 20;
+bigCylinderHeight = 22;
 smallCylinderRaduis = 10;
 smallCylinderHeight = 10;
 separation=15;
