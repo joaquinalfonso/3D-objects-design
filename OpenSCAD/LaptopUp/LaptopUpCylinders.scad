@@ -2,14 +2,14 @@ bigCylinderRadius = 22;
 bigCylinderHeight = 22;
 smallCylinderRadius = 8;
 smallCylinderHeight = 10;
-separation=15;
+separation=16;
 unionHeight = 3;
 holeHeight=smallCylinderHeight;
 holeRadiusUp=smallCylinderRadius+2;
 holeRadiusDown=smallCylinderRadius;
 
 //Global variable
-$fn=100; 
+$fn=36; 
 
 //Big cylinder
 difference() {
