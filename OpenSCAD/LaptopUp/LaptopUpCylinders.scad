@@ -7,6 +7,9 @@ unionHeight = 3;
 holeHeight=11;
 holeRadius=11;
 
+//Global variable
+$fn=100; 
+
 //Big cylinder
 difference() {
 translate([0,0,unionHeight])
