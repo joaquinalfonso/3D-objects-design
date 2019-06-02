@@ -1,12 +1,12 @@
-bigCylinderRaduis = 30;
+bigCylinderRaduis = 22;
 bigCylinderHeight = 22;
-smallCylinderRaduis = 10;
+smallCylinderRaduis = 8;
 smallCylinderHeight = 10;
 separation=15;
 unionHeight = 3;
-holeHeight=11;
-holeRadiusUp=11;
-holeRadiusDown=10;
+holeHeight=smallCylinderHeight;
+holeRadiusUp=smallCylinderRaduis+2;
+holeRadiusDown=smallCylinderRaduis;
 
 //Global variable
 $fn=100; 
@@ -17,12 +17,12 @@ difference() {
         cylinder(h=bigCylinderHeight, d1=bigCylinderRaduis, d2=bigCylinderRaduis);
 
     //Hole
-    translate([-smallCylinderRaduis/2,0,unionHeight+bigCylinderHeight-smallCylinderHeight+0.1])
+    translate([0,0,unionHeight+bigCylinderHeight-smallCylinderHeight+0.1])
         cylinder(h=holeHeight, d1=holeRadiusDown, d2=holeRadiusUp);
 }
 
 //Small cylinder
-translate([(bigCylinderRaduis/2)+separation+(smallCylinderRaduis/2),0,0])
+translate([(bigCylinderRaduis/2)+separation+(smallCylinderRaduis/2),0,unionHeight])
     cylinder(h=smallCylinderHeight, d1=smallCylinderRaduis, d2=smallCylinderRaduis);
 
 //Union
