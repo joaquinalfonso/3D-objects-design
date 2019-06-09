@@ -4,5 +4,7 @@
 ## LaptopMiniStandUp
 Mini stand up for laptop
 
+![OpenSCAD design laptop mini stand up](./LaptopMiniStandUp/LaptopUpCylinders.png)
+
 ## IMacFloatShelf
 Work in progress....
