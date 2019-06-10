@@ -1,15 +1,20 @@
-bigCylinderRadius = 22;
-bigCylinderHeight = 22;
+bigCylinderRadius = 25;
+bigCylinderHeight = 26;
 smallCylinderRadius = 8;
 smallCylinderHeight = 10;
-separation=16;
+separation=18;
 unionHeight = 3;
 holeHeight=smallCylinderHeight;
-holeRadiusUp=smallCylinderRadius+2;
+holeRadiusUp=smallCylinderRadius+1;
 holeRadiusDown=smallCylinderRadius;
 
 //Global variable
-$fn=36; 
+$fn=24; 
+
+rail1YPosition = unionHeight+bigCylinderHeight-4;
+rail2YPosition = unionHeight+(bigCylinderHeight/2-1);
+rail3YPosition = unionHeight+3;
+    
 
 //Big cylinder
 difference() {
@@ -19,6 +24,37 @@ difference() {
     //Hole
     translate([0,0,unionHeight+bigCylinderHeight-smallCylinderHeight+0.1])
         cylinder(h=holeHeight, d1=holeRadiusDown, d2=holeRadiusUp);
+
+    // Rail 1
+    difference() {
+        translate([0,0,rail1YPosition])
+            cylinder(h=1, d1=bigCylinderRadius+0.5, d2=bigCylinderRadius+0.5);
+
+        //Hole
+        translate([0,0,rail1YPosition])
+            cylinder(h=1, d1=bigCylinderRadius-0.5, d2=bigCylinderRadius-0.5);        
+    };
+
+    //Rail 2
+    difference() {
+        translate([0,0,rail2YPosition])
+            cylinder(h=1, d1=bigCylinderRadius+0.5, d2=bigCylinderRadius+0.5);
+
+        //Hole
+        translate([0,0,rail2YPosition])
+            cylinder(h=1, d1=bigCylinderRadius-0.5, d2=bigCylinderRadius-0.5);        
+    }
+
+    //Rail 3
+    difference() {
+        translate([0,0,rail3YPosition])
+            cylinder(h=1, d1=bigCylinderRadius+0.5, d2=bigCylinderRadius+0.5);
+
+        //Hole
+        translate([0,0,rail3YPosition])
+            cylinder(h=1, d1=bigCylinderRadius-0.5, d2=bigCylinderRadius-0.5);        
+    }
+
 }
 
 //Small cylinder
