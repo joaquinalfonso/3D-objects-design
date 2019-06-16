@@ -3,12 +3,12 @@ depth = 40;
 
 width = height/4;
 
-cdHole = 15;
+cdHole = 12;
 
 //Base
 color("orange")
     translate([height+(width/2),(height/2)+(width/1.5),-width])
-        cylinder(width,height*1.6,height*1.5, $fn=16);
+        cylinder(width,height*1.6,height*1.5, $fn=12);
 
 difference() {
     //Logo
@@ -32,6 +32,7 @@ difference() {
     }
 
     //hole
-    translate([-height/2,(depth/2)-width,0])
-        cube([height*3,cdHole,height*2]);
+    translate([-height/2,(depth/2)-width+0.5,1.1])
+        rotate([-5,0,0])
+            cube([height*3,cdHole,height*2]);
 }
