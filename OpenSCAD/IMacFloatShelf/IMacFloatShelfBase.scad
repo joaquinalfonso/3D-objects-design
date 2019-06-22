@@ -5,9 +5,11 @@
     
 totalWidth=200;
 
-width = 100;
+width = 140;
 depth = 100;
 height = 10;
+
+border = 5;
     
 L = 8;
 
@@ -115,5 +117,16 @@ difference() {
     
     translate([(width/3), (-depth/2), 0])
         cylinder(6,6,6, $fn=6);
+
+    // Usb
+    #translate([width, 0, -height/2])
+        cube([5.2, 12.5, height*3], center=true);
+
+//Discos duros 
+// 80*120*21.3
+
+
+
+
 
 }
